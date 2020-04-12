@@ -606,6 +606,8 @@ export type AllAggregations = AllMetricsAggregations &
   AllPipelineAggregations &
   AllMatrixAggregations
 
+export type AggregationName = keyof AllAggregations
+
 export interface Aggregations {
   [name: string]: Aggregation & {
     filter?: Query

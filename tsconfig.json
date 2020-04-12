@@ -5,7 +5,7 @@
     "lib": ["es2016"],
     "declaration": true,
     "sourceMap": true,
-    "rootDir": ".",
+    "rootDir": "src",
     "importHelpers": true,
     "strict": true,
     "noUnusedLocals": true,
@@ -16,5 +16,5 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src", "types", "test"]
+  "include": ["src"]
 }

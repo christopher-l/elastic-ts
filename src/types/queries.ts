@@ -172,14 +172,14 @@ export type FullTextQuery =
   | CommonTermsQuery
   | QueryStringQuery
   | SimpleQueryStringQuery
-export type AllFullTextQueries =
-  | MatchQuery
-  | MatchPhraseQuery
-  | MatchPhrasePrefixQuery
-  | MultiMatchQuery
-  | CommonTermsQuery
-  | QueryStringQuery
-  | SimpleQueryStringQuery
+
+export type AllFullTextQueries = MatchQuery &
+  MatchPhraseQuery &
+  MatchPhrasePrefixQuery &
+  MultiMatchQuery &
+  CommonTermsQuery &
+  QueryStringQuery &
+  SimpleQueryStringQuery
 
 // Term level queries
 
@@ -698,3 +698,5 @@ export type AllFieldQueryConfigs = MatchQueryFieldConfig &
   WildcardFieldConfig &
   RegexpFieldConfig &
   FuzzyFieldConfig
+
+export type QueryType = keyof AllQueries

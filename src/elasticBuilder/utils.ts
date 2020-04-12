@@ -8,7 +8,7 @@ export type StringKeysOf<T> = StringKeyOf<T>[]
 
 export type ValueOf<T> = T[keyof T]
 
-export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>
+export type Optional<T, K extends string> = Omit<T, K> & {[P in Extract<keyof T, K>]?: T[P] | undefined}
 
 export type PlainObject = NotFunction<object>
 
